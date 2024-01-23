@@ -1,0 +1,47 @@
+
+{{ block of styles }}
+<link rel="stylesheet" type="text/css" href="{{ static 'global/styles.css' }}"/>
+{{ endblock }}
+
+{{ block content }}
+
+   <div class="container">
+  <img class="positioning2" id="image" src="/static/imgs/{{prvniobrazek}}.jpeg">
+       <div class="button-group">
+  <button type="button" onclick="NextFunctionA()">Možnost A</button>
+   <button type="button" onclick="NextFunctionB()">Možnost B</button>
+       </div>
+</div>
+
+{{ endblock }}
+{{ block of scripts }}
+<script>
+    var olist = {{seznam | json}};
+    var currentImage = 0;
+    var totalImages = 55;
+    var imageElement = document.getElementById("image");
+    function NextFunctionA(){
+        liveSend({'t':'A', 'tohlekolo':currentImage})
+        currentImage++;
+        if (currentImage === totalImages){
+            $('#form')[0].submit();
+        }
+        else {
+            imageElement.src = "/static/imgs/"+ olist[currentImage] + ".jpeg";
+        }
+
+    }
+    function NextFunctionB(){
+        liveSend({'t':'B', 'tohlekolo':currentImage })
+        currentImage++;
+        if (currentImage === totalImages){
+            $('#form')[0].submit();
+        }
+        else {
+            imageElement.src = "/static/imgs/"+ olist[currentImage] + ".jpeg";
+        }
+
+    }
+
+</script>
+{{ endblock }}
