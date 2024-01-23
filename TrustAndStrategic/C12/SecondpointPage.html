@@ -1,0 +1,27 @@
+{{ block of styles }}
+<link rel="stylesheet" type="text/css" href="{{ static 'global/styles.css' }}"/>
+{{ endblock }}
+{{ block content }}
+
+
+<div class="text2">Toto byla jedna z možných her. V průběhu tohoto experimentu se budete setkávat s tabulkami s různými výplatami, což povede k jiným motivacím. Druhá hra, se kterou se setkáte v první části, bude vypadat takto: </div>
+<br>
+<img class="positioning" src="/static/img/img_10.png">
+<br>
+<div class="text2">Pokud bude váš náklad C1 mezi 0 a 40 Kč, je pro vás akce A výhodnější bez ohledu na akci druhého hráče. Např. pro C1 = 10 by tabulka s vašimi výplatami vypadala takto: </div>
+<br>
+<img class="positioning" src="/static/img/img_11.png">
+<br>
+<div class="text2">Naopak pro hodnoty C1 mezi 160 a 200 bude opět akce B výhodnější pro oba hráče. Např. pro C1 = 190 by tabulka s vašimi výplatami vypadala takto:  </div>
+<br>
+<img class="positioning" src="/static/img/img_12.png">
+<br>
+<div class="text2">Od předchozí hry se tato hra odlišuje pro hodnoty C1 mezi 40 a 160, protože v tomto případě nebudete chtít volit stejnou, ale opačnou akci než druhý hráč. V tabulce dole vidíte situaci, kdy se C1 rovná 110 Kč. Kdyby druhý hráč zvolil A (levý sloupec), získali byste volbou A 110 Kč a volbou B 180 Kč. Kdyby druhý hráč zvolil B (pravý sloupec), získali byste volbou A 270 Kč a volbou B jen 220 Kč. Vaše výplata z akce A je vyšší ve sloupci, kde druhý hráč hraje B, a vaše výplata z akce B je vyšší v sloupci, kde druhý hráč hraje A. </div>
+<br>
+<img class="positioning" src="/static/img/img_16.png">
+<br>
+<div class="text2">Máte otázky? Pokud ne, můžete stisknout tlačítko další. </div>
+<br>
+    {{ next_button }}
+
+{{ endblock }}

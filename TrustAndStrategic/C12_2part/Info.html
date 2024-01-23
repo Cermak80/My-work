@@ -1,0 +1,34 @@
+{{ block of styles }}
+<link rel="stylesheet" type="text/css" href="{{ static 'global/styles.css' }}"/>
+{{ endblock }}
+{{ block content }}
+<div class="title">
+    Druhá část prvního experimentu
+</div>
+<br>
+<div class="text2">V druhé části experimentu se budete rozhodovat v 10 hrách. Druhý hráč bude ve všech 10 hrách druhé části stejný, ale mezi hrami nedostanete žádnou informaci o volbách druhého hráče a zároveň on nedostane žádnou informaci o vašich rozhodnutích. Bude náhodně vybrán z účastníků tohoto sezení, se kterými jste ještě nehráli. </div>
+<br>
+<div class="text2">
+    Budete hrát podobné hry jako v první části. Hlavní rozdíl oproti první části bude spočívat ve způsobu odpovídání. Hry spojíme do 5 párů. Budete tedy odpovídat jen na 5 obrazovkách. Na každé obrazovce uvidíte jednu hru na levé straně a druhou hru na pravé straně. Navíc vás na posledním řádku každé obrazovky požádáme, abyste si vybrali, kterou hru byste z těchto dvou her preferovali jako výplatní.
+</div>
+<br>
+<div class="text2">
+    Na závěr sezení počítač náhodně určí, jestli vám bude proplacena jedna hra z části 1 (pravděpodobnost 23 %) nebo z části 2 (pravděpodobnost 77 %). Bude-li vám proplacena hra z části 2, náhodně vybereme jeden ze 5 párů. U daného páru určíme, zda bude pro vaši výplatu relevantní hra vlevo nebo hra vpravo. Uděláme to tak, že náhodně vybereme, zda vezmeme v potaz vaši preferenci nebo preferenci druhého hráče. Např. kdybyste u daného páru her preferovali hru vlevo a druhý hráč hru vpravo, bude u každé z těchto her stejná šance, že bude vybrána k výplatě. Pokud byste oba preferovali např. hru vpravo, bude se vyplácet hra vpravo.
+</div>
+<br>
+<div class="text2">
+    U vybrané hry pak budeme postupovat stejně jako v části 1. Počítač náhodně vylosuje vaši hodnotu C1 z možností: 10, 30, 50, 70, …, 150, 170, 190. Každá z těchto 10 hodnot bude vybrána se stejnou pravděpodobností. Pak provede druhé losování, ze kterého vzejde hodnota C2 druhého hráče. Dále zjistí, jakou akci jste zvolili pro vylosované C1 a jakou akci vybral pro vylosované C2 druhý hráč. Vaše výplata bude odpovídat poli tabulky, ve kterém se protne vaše akce s akcí druhého hráče.
+</div>
+<br>
+<div class="text2">
+    <b>Stejně jako v první části platí, že je při rozhodování potřeba mít na paměti, že jakékoli vaše rozhodnutí může určit vaši výplatu v tomto experimentu.</b>
+</div>
+<br>
+<div class="text2">
+    V druhé části experimentu vám nebudeme po jednotlivých obrazovkách dávat zpětnou vazbu. Na konci experimentu vám řekneme, jaká hra je vybrána jako výplatní a jaká je vaše výhra.
+</div>
+<br>
+
+    {{ next_button }}
+
+{{ endblock }}

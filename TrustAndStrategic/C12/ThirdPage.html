@@ -1,0 +1,50 @@
+{{ block of styles }}
+<link rel="stylesheet" type="text/css" href="{{ static 'global/styles.css' }}"/>
+{{ endblock }}
+{{ block content }}
+<div class="text2">
+    U některých číselných nastaveních her se také může stát, že bude pro všechny možné náklady C jedna z akcí výhodnější nehledě na akce druhého hráče. Zde je třetí hra, se kterou se setkáte v první části:
+</div>
+<br>
+<img class="positioning" src="/static/img/img_7.png">
+<br>
+<div class="text2">
+    Zde by je pro všechna C1 mezi 0 a 120 výhodnější akce A. Např. pro C1 = 70 by matice s vašimi výplatami vypadala takto:
+</div>
+<br>
+<img class="positioning" src="/static/img/img_8.png">
+<br>
+<div class="text2">
+    Naopak pro všechny náklady mezi 120 a 200 je výhodnější akce B. Např. pro C = 170 by matice s vašimi výplatami vypadala takto:
+</div>
+<br>
+<img class="positioning" src="/static/img/img_9.png">
+<br>
+<div class="text2">
+    <b>Jak budete odpovídat?</b>
+</div>
+<br>
+<div class="text2">
+    V první části experimentu budete hrát každou z výše uvedených her. Celkem tedy budete hrát 3 hry. Připomínáme, že před každou hrou vždy znovu náhodně vybereme druhého hráče z jedné poloviny hráčů, kteří jsou v této místnosti.
+</div>
+<br>
+<div class="text2">
+    U každé hry od vás posbíráme odpovědi pro všechny možné hodnoty vašich nákladů C1, a to vše na jedné obrazovce. Celkem tedy budete odpovídat na 30 otázek na 3 obrazovkách.
+</div>
+<br>
+<div class="text2"><b>Výpočet výplat a zpětná vazba</b></div>
+<br>
+<div class="text2">
+    Po každé hře vylosuje počítač náhodně vaši hodnotu C1 ze všech 10 možností od 10 do 190. Každá z těchto 10 hodnot bude vybrána se stejnou pravděpodobností. Pak provede druhé losování, ze kterého vzejde hodnota C2 druhého hráče. Obě hodnoty se losují nezávisle, mohou se lišit. Počítač dále zjistí, jakou akci jste zvolili pro vylosované C1 a jakou akci vybral druhý hráč pro vylosované C2. Vaše výplata pak bude odpovídat poli tabulky, ve kterém se protne vaše akce s akcí druhého hráče.
+</div>
+<br>
+<div class="text2">Po každé hře se dozvíte, jaká C počítač vylosoval pro vás a pro druhého hráče, jaké jste pro daná C zvolili akce a jaké jste získali výplaty.</div>
+<br>
+<div class="text2">S pravděpodobností 3/13 = 23 % vám bude k výplatě vylosována jedna z her z první části. <b>Při rozhodování je tedy potřeba mít na paměti, že jakékoli vaše rozhodnutí může určit vaši výplatu v tomto experimentu.</b> </div>
+
+<br>
+
+
+    {{ next_button }}
+
+{{ endblock }}

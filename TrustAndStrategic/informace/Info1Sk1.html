@@ -1,0 +1,80 @@
+{{ block of styles }}
+<link rel="stylesheet" type="text/css" href="{{ static 'global/styles.css' }}"/>
+{{ endblock }}
+{{ block content }}
+<div class="title">Instrukce</div>
+<br>
+
+<div class="text2">
+  V experimentu vám bude náhodně přidělena role hráče A, B nebo C. Instrukce na této obrazovce jsou stejné pro hráče v každé roli. V každém kole budete hrát hru, jejíž průběh bude následující:
+</div>
+<br>
+{{ if Treatment == "1" or Treatment == "2"}}
+<div class="text2">
+    1. Hráč B se závazně rozhodne kolik procent z částky získané po ztrojnásobení vrátí hráči A. Zbylou částku si ponechá. Kolik procent pošle zpět <b>vidí</b> hráč C, ale nikoli Hráč A.
+</div>
+{{ endif }}
+{{ if Treatment == "3" or Treatment == "4"}}
+<div class="text2">
+    1. Hráč B se závazně rozhodne kolik procent z částky získané po ztrojnásobení vrátí hráči A. Zbylou částku si ponechá. Kolik procent pošle zpět <b>nevidí</b> ani hráč C ani hráč A.
+</div>
+{{ endif }}
+<br>
+<div class="text2">
+    2. Hráč B pošle hráči A informaci, kolik procent zvolil. Hráč B se však <b>nemusí</b> rozhodnout poslat informaci o skutečně zvolené částce. Hráči A se tato informace zobrazí jako procento poslané čásky.
+</div>
+<br>
+<div class="text2">
+    <b>Příklady:</b>
+</div>
+<div class="text2">
+
+Hráč B se rozhodne říci, že vrátí 50 % toho, kolik po ztrojnásobení od hráče A dostane. Hráč A tedy na obrazovce uvidí, že se mu vrátí 150 % poslané částky.
+
+</div>
+<br>
+<div class="text2">
+    Hráč B se rozhodne říci, že vrátí 30 % toho, kolik po ztrojnásobení od hráče A dostane. Hráč A tedy na obrazovce uvidí, že se mu vrátí 90 % poslané částky.
+</div>
+<br>
+<div class="text2">
+ Hráč B se rozhodne říci, že vrátí 0 % toho, kolik po ztrojnásobení od hráče A dostane. Hráč A tedy na obrazovce uvidí, že se mu vrátí 0 % poslané částky.
+</div>
+<br>
+{{ if Treatment == "1" or Treatment == "2"}}
+<div class="text2">
+    3. Hráč C pošle hráči A informaci, kolik procent hráč B zvolil. Ani hráč C nemusí poslat informaci o skutečně zvolené částce. Hráči A se tato informace opět zobrazí jako procento poslané částky.
+</div>
+{{ endif}}
+{{ if Treatment == "3" or Treatment == "4"}}
+<div class="text2">
+    3. Hráč C pošle hráči A informaci, kolik procent hráč B zvolil. Hráč C ovšem ve skutečnosti <b>neví</b>, jaké procento hráč B zvolil. Hráči A se tato informace opět zobrazí jako procento poslané částky.
+</div>
+{{ endif }}
+<br>
+
+<div class="text2">
+    4. Hráč A si zvolí kolik Kč pošle hráči B.
+</div>
+<br>
+<div class="text2">
+    5. Transakce mezi hráči A a B se vyhodnotí.
+</div>
+<ul>
+    <li class="text2">Hráč A získá částku, kterou mu poslal zpět hráč B a částku, kterou neposlal hráči B</li>
+    <li class="text2">Hráč B získá trojnásobek částky poslané hráčem A minus procentuální podíl této částky, který se rozhodl poslat zpět. </li>
+    {{ if Treatment == "1" or Treatment == "3"}}
+    <li class="text2">Hráč C získá fixní bonus 50 Kč.</li>
+    {{ endif }}
+    {{ if Treatment == "2" or Treatment == "4"}}
+    <li class="text2">Odměna hráče C je tím menší, čím více pošle hráč A hráči B. Konkrétně, hráč C získá 100 Kč minus částku, kterou poslal hráč A hráči B.  </li>
+    {{ endif }}
+</ul>
+<br>
+<div class="text2">
+    Informaci o vydělané částce zjistíte až na úplném konci druhého experimentu.
+</div>
+<br>
+    {{ next_button }}
+
+{{ endblock }}

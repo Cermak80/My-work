@@ -1,0 +1,34 @@
+{{ block of styles }}
+<link rel="stylesheet" type="text/css" href="{{ static 'global/styles.css' }}"/>
+{{ endblock }}
+{{ block content }}
+<b>{{ Kolo }} / 5</b>
+<div class="text2" >
+    Jste v roli hráče B.
+</div>
+<br>
+<div class="text2">
+    Závazně prosím zvolte kolik procent částky získané (po ztrojnásobení) od hráče A pošlete hráči A zpět.
+</div>
+<br>
+
+{{ if Treatment == "1" or Treatment == "2" }}
+<div class="text2">
+    Vámi zvolené procento uvidí pouze hráč C. Hráč C posílá hráči A zprávu kolik procent chcete vrátit. Zpráva hráče C nemusí být pravdivá.
+</div>
+{{ endif }}
+{{ if Treatment == "3" or Treatment == "4" }}
+<div class="text2">
+    Vámi zvolené procento hráč C ani hráč A neuvidí. Hráč C posílá hráči A zprávu kolik procent můžete chtít vrátit.
+</div>
+{{ endif }}
+<br>
+
+<div class="text2">
+    {{ formfields }}
+</div>
+
+<br>
+    {{ next_button }}
+
+{{ endblock }}
