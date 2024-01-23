@@ -1,0 +1,27 @@
+{{ block of styles}}
+<style>
+.text {
+    font-family: Serif;
+    font-style: Normal;
+    font-size: large;
+    line-height: 1.7;
+    text-align: justify;
+
+}
+</style>
+{{ endblock }}
+
+
+{{ block content }}
+<div class="text">
+    <b>1. Část </b> Když se rozhodujete, jestli je něco správné nebo špatné, do jaké míry berete při vašem uvažování ohled na následující kritéria?
+</div>
+<br>
+<div class="text">
+    Ohodnoťte prosím každé tvrzení:
+</div>
+{{ formfields }}
+    {{ next_button }}
+{{ endblock }}
+
+

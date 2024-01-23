@@ -1,0 +1,27 @@
+{{ block of styles}}
+<style>
+.text {
+    font-family: Serif;
+    font-style: Normal;
+    font-size: large;
+    line-height: 1.7;
+    text-align: justify;
+
+}
+</style>
+{{ endblock }}
+
+
+{{ block content }}
+<div class="text">
+    <b>2. Část</b> Přečtěte si prosím následující věty a označte svůj souhlas nebo nesouhlas
+</div>
+<br>
+<div class="text">
+   Souhlas nebo nesouhlas:
+</div>
+{{ formfields }}
+    {{ next_button }}
+{{ endblock }}
+
+

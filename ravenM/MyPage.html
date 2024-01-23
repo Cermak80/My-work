@@ -1,0 +1,243 @@
+
+{{ block of styles }}
+<style>
+    .positioning2 {
+    width: 80%;
+    position: relative;
+        margin: auto;
+}
+.container_2 {
+        position: relative;
+        justify-content: center;
+    text-align: center;
+    }
+.button1 {
+        position: absolute;
+        top: 62%;
+        left: 19%;
+        width: 12%; /* Přizpůsobte šířku tlačítka dle potřeby */
+        height: 12%; /* Přizpůsobte výšku tlačítka dle potřeby */
+        /* Další vlastnosti tlačítka (barva pozadí, styl písma, atd.) */
+        background-color: transparent;
+    border: none;
+    }
+.button1:hover {
+        background-color: #e9e9e9;
+        opacity: 0.3;
+        border-radius: 5px;
+    }
+.button2:hover {
+        background-color: #e9e9e9;
+        opacity: 0.3;
+        border-radius: 5px;
+    }
+.button3:hover {
+        background-color: #e9e9e9;
+        opacity: 0.3;
+        border-radius: 5px;
+    }
+.button4:hover {
+        background-color: #e9e9e9;
+        opacity: 0.3;
+        border-radius: 5px;
+    }
+.button5:hover {
+        background-color: #e9e9e9;
+        opacity: 0.3;
+        border-radius: 5px;
+    }
+.button6:hover {
+        background-color: #e9e9e9;
+        opacity: 0.3;
+        border-radius: 5px;
+    }
+.button7:hover {
+        background-color: #e9e9e9;
+        opacity: 0.3;
+        border-radius: 5px;
+    }
+.button8:hover {
+        background-color: #e9e9e9;
+        opacity: 0.3;
+        border-radius: 5px;
+    }
+.button2 {
+        position: absolute;
+        top: 62%;
+        left: 36%;
+        width: 12%; /* Přizpůsobte šířku tlačítka dle potřeby */
+        height: 12%; /* Přizpůsobte výšku tlačítka dle potřeby */
+        /* Další vlastnosti tlačítka (barva pozadí, styl písma, atd.) */
+    background-color: transparent;
+    border: none;
+    }
+.button3 {
+        position: absolute;
+        top: 62%;
+        left: 52%;
+        width: 12%; /* Přizpůsobte šířku tlačítka dle potřeby */
+        height: 12%; /* Přizpůsobte výšku tlačítka dle potřeby */
+        /* Další vlastnosti tlačítka (barva pozadí, styl písma, atd.) */
+    background-color: transparent;
+    border: none;
+    }
+.button4 {
+        position: absolute;
+        top: 62%;
+        left: 69%;
+        width: 12%; /* Přizpůsobte šířku tlačítka dle potřeby */
+        height: 12%; /* Přizpůsobte výšku tlačítka dle potřeby */
+        /* Další vlastnosti tlačítka (barva pozadí, styl písma, atd.) */
+    background-color: transparent;
+    border: none;
+    }
+
+.button5 {
+        position: absolute;
+        top: 80%;
+        left: 19%;
+        width: 12%; /* Přizpůsobte šířku tlačítka dle potřeby */
+        height: 12%; /* Přizpůsobte výšku tlačítka dle potřeby */
+        /* Další vlastnosti tlačítka (barva pozadí, styl písma, atd.) */
+    background-color: transparent;
+    border: none;
+    }
+.button6 {
+        position: absolute;
+        top: 80%;
+        left: 36%;
+        width: 12%; /* Přizpůsobte šířku tlačítka dle potřeby */
+        height: 12%; /* Přizpůsobte výšku tlačítka dle potřeby */
+        /* Další vlastnosti tlačítka (barva pozadí, styl písma, atd.) */
+    background-color: transparent;
+    border: none;
+    }
+.button7 {
+        position: absolute;
+        top: 80%;
+        left: 52%;
+        width: 12%; /* Přizpůsobte šířku tlačítka dle potřeby */
+        height: 12%; /* Přizpůsobte výšku tlačítka dle potřeby */
+        /* Další vlastnosti tlačítka (barva pozadí, styl písma, atd.) */
+    background-color: transparent;
+    border: none;
+    }
+.button8 {
+        position: absolute;
+        top: 80%;
+        left: 69%;
+        width: 12%; /* Přizpůsobte šířku tlačítka dle potřeby */
+        height: 12%; /* Přizpůsobte výšku tlačítka dle potřeby */
+        /* Další vlastnosti tlačítka (barva pozadí, styl písma, atd.) */
+    background-color: transparent;
+    border: none;
+    }
+</style>
+{{ endblock }}
+
+{{ block content }}
+
+   <div class="container_2">
+  <img class="positioning2" id="image" src="/static/imgs/{{firstpic}}.jpg">
+
+  <button class="button1" type="button" onclick="information1()"></button>
+   <button class="button2" type="button" onclick="information2()"></button>
+           <button class="button3" type="button" onclick="information3()"></button>
+   <button class="button4" type="button" onclick="information4()"></button>
+           <button class="button5" type="button" onclick="information5()"></button>
+   <button class="button6" type="button" onclick="information6()"></button>
+           <button class="button7" type="button" onclick="information7()"></button>
+   <button class="button8" type="button" onclick="information8()"></button>
+
+</div>
+{{ endblock }}
+{{ block of scripts }}
+
+<script>
+    var index = 0;
+    var ravenlist = {{raven | json}};
+    var imageElement = document.getElementById("image");
+    function information1(){
+        liveSend({'t': 1,'ind':index})
+        index++
+        if (index === 18){
+            $('#form')[0].submit();
+        }
+        else {
+            imageElement.src = "/static/imgs/"+ ravenlist[index] + ".jpg";
+        }
+    }
+    function information2(){
+        liveSend({'t': 2,'ind':index})
+        index++
+        if (index === 18){
+            $('#form')[0].submit();
+        }
+        else {
+            imageElement.src = "/static/imgs/"+ ravenlist[index] + ".jpg";
+        }
+    }
+    function information3(){
+        liveSend({'t': 3,'ind':index})
+        index++
+        if (index === 18){
+            $('#form')[0].submit();
+        }
+        else {
+            imageElement.src = "/static/imgs/"+ ravenlist[index] + ".jpg";
+        }
+    }
+    function information4(){
+        liveSend({'t': 4,'ind':index})
+        index++
+        if (index === 18){
+            $('#form')[0].submit();
+        }
+        else {
+            imageElement.src = "/static/imgs/"+ ravenlist[index] + ".jpg";
+        }
+    }
+    function information5(){
+        liveSend({'t': 5,'ind':index})
+        index++
+        if (index === 18){
+            $('#form')[0].submit();
+        }
+        else {
+            imageElement.src = "/static/imgs/"+ ravenlist[index] + ".jpg";
+        }
+    }
+    function information6(){
+        liveSend({'t': 6,'ind':index})
+        index++
+        if (index === 18){
+            $('#form')[0].submit();
+        }
+        else {
+            imageElement.src = "/static/imgs/"+ ravenlist[index] + ".jpg";
+        }
+    }
+    function information7(){
+        liveSend({'t': 7,'ind':index})
+        index++
+        if (index === 18){
+            $('#form')[0].submit();
+        }
+        else {
+            imageElement.src = "/static/imgs/"+ ravenlist[index] + ".jpg";
+        }
+    }
+    function information8(){
+        liveSend({'t': 8,'ind':index})
+        index++
+        if (index === 18){
+            $('#form')[0].submit();
+        }
+        else {
+            imageElement.src = "/static/imgs/"+ ravenlist[index] + ".jpg";
+        }
+    }
+
+</script>
+
+{{ endblock }}

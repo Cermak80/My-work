@@ -1,0 +1,37 @@
+{{ block of styles}}
+<style>
+.text {
+    font-family: Serif;
+    font-style: Normal;
+    font-size: large;
+    line-height: 1.7;
+    text-align: justify;
+
+}
+</style>
+{{ endblock }}
+
+
+
+{{ block content }}
+
+{{ formfield "WP1" }}
+<p>Nyní se vás zeptáme na vaši ochotu jednat určitým způsobem. Udejte prosím opět svou odpověď na stupnici od 0 do 10. Hodnocení 0 znamená „naprosto neochotný/á takto jednat“ a 10 znamená „velmi ochotný/á takto jednat“ Pro zařazení se na stupnici od 0 do 10 můžete použít jakékoli číslo v tomto intervalu, čili 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, nebo 10. (PŘEČTĚTE A-D) </p>
+   {{ formfield "WP2" }}
+    {{ formfield "WP3" }}
+    {{ formfield "WP4" }}
+    {{ formfield "WP5" }}
+<br>
+<p>Jak dobře vás každé z následujících tvrzení vystihuje jako člověka ? Uveďte svoji odpověď na stupnici od 0 do 10. Hodnocení 0 znamená „vůbec mě to nevystihuje“ a 10 znamená „vystihuje mě to dokonale“ Pro zařazení se na stupnici od 0 do 10 můžete použít jakékoli číslo v tomto intervalu, čili 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, nebo 10. (PŘEČTĚTE A-E) </p>
+{{ formfield "WP6" }}
+    {{ formfield "WP7" }}
+    {{ formfield "WP8" }}
+    {{ formfield "WP9" }}
+ {{ formfield "WP10" }}
+<br>
+{{ formfield "WP11" }}
+ {{ formfield "WP12" }}
+    {{ next_button }}
+{{ endblock }}
+
+

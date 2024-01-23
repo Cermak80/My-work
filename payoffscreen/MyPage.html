@@ -1,0 +1,25 @@
+
+{{ block of styles }}
+<link rel="stylesheet" type="text/css" href="{{ static 'global/styles.css' }}"/>
+{{ endblock }}
+
+
+
+{{ block title }}
+    Vaše výsledky
+{{ endblock }}
+{{ block content }}
+{{ if Co2Win == 1}}
+<div class="text2"> Byli jste vylosováni v úkolu 3</div>
+{{ endif }}
+{{ if Co2Win == 0 }}
+<div class="text2">Nebyli jste vylosováni v úkolu 3</div>
+{{ endif }}
+<br>
+<div class="text2">Dohromady jste v experimentu získali: {{ Windohromady }}</div>
+<br>
+
+    {{ formfields }}
+    {{ next_button }}
+
+{{ endblock }}
