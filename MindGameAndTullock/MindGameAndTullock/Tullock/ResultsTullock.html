@@ -1,0 +1,52 @@
+{{block of styles}}
+<style>
+.text {
+    font-family: Serif;
+    font-style: Normal;
+    font-size: large;
+    line-height: 1.7;
+    text-align: justify;
+
+}
+.title {
+    font-size: xx-large;
+    font-weight: bold;
+    font-family: Serif;
+}
+.text_b {
+    font-family: Serif;
+    font-style: Normal;
+    font-size: large;
+    line-height: 1.7;
+    text-align: justify;
+    font-weight: bold;
+}
+
+.positioning{
+    width: 30%;
+    position: relative;
+}
+table, th, td {
+  border: 1px solid black;
+    text-align:center
+}
+.positioningava{
+    position: absolute;
+    top: 5%;
+    left: 80%;
+}
+</style>
+{{endblock}}
+{{ block content }}
+<div class="text">You invested {{inv}} tokens. Your opponent invested {{coll_inv}} tokens</div>
+<br>
+<div class="text">Your payoff is {{w_in_tokens}} tokens. This is equivalent to £{{payoff}}</div>
+<br>
+<div class="text">Your opponent’s payoff is {{opponent_payT}} tokens. This is equivalent to {{opponent_pay}}.</div>
+<br>
+<div class="text">
+    You predicted that your opponent would invest {{Expectation}} tokens. {{if prediction == 0}}Your prediction was not accurate to within 10 tokens, so you do not receive any bonus.{{endif}}{{if prediction == 1}} Your prediction was accurate to within 10 tokens, so you receive a bonus of £0.5. {{endif}}
+</div>
+<br>
+    {{ next_button }}
+{{endblock}}
