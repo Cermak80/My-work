@@ -1,0 +1,942 @@
+{{ block of styles }}
+
+<style>
+.container {
+      display: table;
+      margin: 0 auto;
+      text-align: center;
+      border-collapse: collapse;
+    }
+
+    .row {
+      display: table-row;
+    }
+
+    .cell {
+      display: table-cell;
+      padding: 10px;
+      border: 1px solid black;
+      width: 50%;
+      box-sizing: border-box;
+    }
+
+    .label {
+      margin-bottom: 5px;
+    }
+
+    .button {
+      padding: 5px 10px;
+      background-color: grey;
+      color: white;
+      border: none;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  </style>
+
+{{ endblock }}
+
+
+
+{{ block content }}
+
+<div id="otazka_1">
+
+
+    <div class="container">
+        <div class="row">
+            <div class="cell">
+        <span class="label">{{ tabulka1.0.0.3 }}</span>
+            </div>
+            <div class="cell">
+                <span class="label">{{ tabulka1.0.0.4 }} </span>
+            </div>
+
+            </div>
+            <div class="row">
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.0.0.1 }}" onclick="DalsiOtazka();o1()">  {{ tabulka1.0.0.1 }}</button>
+            </div>
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.0.0.2 }}" onclick="DalsiOtazka();o2()"> {{ tabulka1.0.0.2 }}</button>
+    </div>
+            </div>
+    </div>
+
+
+</div>
+<div id="otazka_2">
+    <div class="container">
+        <div class="row">
+            <div class="cell">
+        <span class="label">{{ tabulka1.0.1.3 }}</span>
+            </div>
+            <div class="cell">
+                <span class="label">{{ tabulka1.0.1.4 }} </span>
+            </div>
+
+            </div>
+            <div class="row">
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.0.1.1 }}" onclick="DalsiOtazka();o1()">  {{ tabulka1.0.1.1 }}</button>
+            </div>
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.0.1.2 }}" onclick="DalsiOtazka();o2()"> {{ tabulka1.0.1.2 }}</button>
+    </div>
+            </div>
+    </div>
+
+
+</div>
+<div id="otazka_3">
+        <div class="container">
+        <div class="row">
+            <div class="cell">
+        <span class="label">{{ tabulka1.0.2.3 }}</span>
+            </div>
+            <div class="cell">
+                <span class="label">{{ tabulka1.0.2.4 }} </span>
+            </div>
+
+            </div>
+            <div class="row">
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.0.2.1 }}" onclick="DalsiOtazka();o1()">  {{ tabulka1.0.2.1 }}</button>
+            </div>
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.0.2.2 }}" onclick="DalsiOtazka();o2()"> {{ tabulka1.0.2.2 }}</button>
+    </div>
+            </div>
+    </div>
+</div>
+<div id="otazka_4">
+        <div class="container">
+        <div class="row">
+            <div class="cell">
+        <span class="label">{{ tabulka1.0.3.3 }}</span>
+            </div>
+            <div class="cell">
+                <span class="label">{{ tabulka1.0.3.4 }} </span>
+            </div>
+
+            </div>
+            <div class="row">
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.0.3.1 }}" onclick="DalsiOtazka();o1()">  {{ tabulka1.0.3.1 }}</button>
+            </div>
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.0.3.2 }}" onclick="DalsiOtazka();o2()"> {{ tabulka1.0.3.2 }}</button>
+    </div>
+            </div>
+    </div>
+    </div>
+<div id="otazka_5">
+        <div class="container">
+        <div class="row">
+            <div class="cell">
+        <span class="label">{{ tabulka1.0.4.3 }}</span>
+            </div>
+            <div class="cell">
+                <span class="label">{{ tabulka1.0.4.4 }} </span>
+            </div>
+
+            </div>
+            <div class="row">
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.0.4.1 }}" onclick="DalsiOtazka();o1()">  {{ tabulka1.0.4.1 }}</button>
+            </div>
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.0.4.2 }}" onclick="DalsiOtazka();o2()"> {{ tabulka1.0.4.2 }}</button>
+    </div>
+            </div>
+    </div>
+</div>
+<div id="otazka_6">
+        <div class="container">
+        <div class="row">
+            <div class="cell">
+        <span class="label">{{ tabulka1.0.5.3 }}</span>
+            </div>
+            <div class="cell">
+                <span class="label">{{ tabulka1.0.5.4 }} </span>
+            </div>
+
+            </div>
+            <div class="row">
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.0.5.1 }}" onclick="DalsiOtazka();o1()">  {{ tabulka1.0.5.1 }}</button>
+            </div>
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.0.5.2 }}" onclick="DalsiOtazka();o2()"> {{ tabulka1.0.5.2 }}</button>
+    </div>
+            </div>
+    </div>
+</div>
+<div id="otazka_7">
+    <div class="container">
+        <div class="row">
+            <div class="cell">
+        <span class="label">{{ tabulka1.1.0.3 }}</span>
+            </div>
+            <div class="cell">
+                <span class="label">{{ tabulka1.1.0.4 }} </span>
+            </div>
+
+            </div>
+            <div class="row">
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.1.0.1 }}" onclick="DalsiOtazka();o1()">  {{ tabulka1.1.0.1 }}</button>
+            </div>
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.1.0.2 }}" onclick="DalsiOtazka();o2()"> {{ tabulka1.1.0.2 }}</button>
+    </div>
+            </div>
+    </div>
+</div>
+<div id="otazka_8">
+    <div class="container">
+        <div class="row">
+            <div class="cell">
+        <span class="label">{{ tabulka1.1.1.3 }}</span>
+            </div>
+            <div class="cell">
+                <span class="label">{{ tabulka1.1.1.4 }} </span>
+            </div>
+
+            </div>
+            <div class="row">
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.1.1.1 }}" onclick="DalsiOtazka();o1()">  {{ tabulka1.1.1.1 }}</button>
+            </div>
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.1.1.2 }}" onclick="DalsiOtazka();o2()"> {{ tabulka1.1.1.2 }}</button>
+    </div>
+            </div>
+    </div>
+</div>
+<div id="otazka_9">
+    <div class="container">
+        <div class="row">
+            <div class="cell">
+        <span class="label">{{ tabulka1.1.2.3 }}</span>
+            </div>
+            <div class="cell">
+                <span class="label">{{ tabulka1.1.2.4 }} </span>
+            </div>
+
+            </div>
+            <div class="row">
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.1.2.1 }}" onclick="DalsiOtazka();o1()">  {{ tabulka1.1.2.1 }}</button>
+            </div>
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.1.2.2 }}" onclick="DalsiOtazka();o2()"> {{ tabulka1.1.2.2 }}</button>
+    </div>
+            </div>
+    </div>
+</div>
+<div id="otazka_10">
+    <div class="container">
+        <div class="row">
+            <div class="cell">
+        <span class="label">{{ tabulka1.1.3.3 }}</span>
+            </div>
+            <div class="cell">
+                <span class="label">{{ tabulka1.1.3.4 }} </span>
+            </div>
+
+            </div>
+            <div class="row">
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.1.3.1 }}" onclick="DalsiOtazka();o1()">  {{ tabulka1.1.3.1 }}</button>
+            </div>
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.1.3.2 }}" onclick="DalsiOtazka();o2()"> {{ tabulka1.1.3.2 }}</button>
+    </div>
+            </div>
+    </div>
+</div>
+<div id="otazka_11">
+    <div class="container">
+        <div class="row">
+            <div class="cell">
+        <span class="label">{{ tabulka1.1.4.3 }}</span>
+            </div>
+            <div class="cell">
+                <span class="label">{{ tabulka1.1.4.4 }} </span>
+            </div>
+
+            </div>
+            <div class="row">
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.1.4.1 }}" onclick="DalsiOtazka();o1()">  {{ tabulka1.1.4.1 }}</button>
+            </div>
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.1.4.2 }}" onclick="DalsiOtazka();o2()"> {{ tabulka1.1.4.2 }}</button>
+    </div>
+            </div>
+    </div>
+</div>
+<div id="otazka_12">
+    <div class="container">
+        <div class="row">
+            <div class="cell">
+        <span class="label">{{ tabulka1.1.5.3 }}</span>
+            </div>
+            <div class="cell">
+                <span class="label">{{ tabulka1.1.5.4 }} </span>
+            </div>
+
+            </div>
+            <div class="row">
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.1.5.1 }}" onclick="DalsiOtazka();o1()">  {{ tabulka1.1.5.1 }}</button>
+            </div>
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.1.5.2 }}" onclick="DalsiOtazka();o2()"> {{ tabulka1.1.5.2 }}</button>
+    </div>
+            </div>
+    </div>
+</div>
+<div id="otazka_13">
+    <div class="container">
+        <div class="row">
+            <div class="cell">
+        <span class="label">{{ tabulka1.2.0.3 }}</span>
+            </div>
+            <div class="cell">
+                <span class="label">{{ tabulka1.2.0.4 }} </span>
+            </div>
+
+            </div>
+            <div class="row">
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.2.0.1 }}" onclick="DalsiOtazka();o1()">  {{ tabulka1.2.0.1 }}</button>
+            </div>
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.2.0.2 }}" onclick="DalsiOtazka();o2()"> {{ tabulka1.2.0.2 }}</button>
+    </div>
+            </div>
+    </div>
+</div>
+<div id="otazka_14">
+    <div class="container">
+        <div class="row">
+            <div class="cell">
+        <span class="label">{{ tabulka1.2.1.3 }}</span>
+            </div>
+            <div class="cell">
+                <span class="label">{{ tabulka1.2.1.4 }} </span>
+            </div>
+
+            </div>
+            <div class="row">
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.2.1.1 }}" onclick="DalsiOtazka();o1()">  {{ tabulka1.2.1.1 }}</button>
+            </div>
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.2.1.2 }}" onclick="DalsiOtazka();o2()"> {{ tabulka1.2.1.2 }}</button>
+    </div>
+            </div>
+    </div>
+</div>
+<div id="otazka_15">
+    <div class="container">
+        <div class="row">
+            <div class="cell">
+        <span class="label">{{ tabulka1.2.2.3 }}</span>
+            </div>
+            <div class="cell">
+                <span class="label">{{ tabulka1.2.2.4 }} </span>
+            </div>
+
+            </div>
+            <div class="row">
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.2.2.1 }}" onclick="DalsiOtazka();o1()">  {{ tabulka1.2.2.1 }}</button>
+            </div>
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.2.2.2 }}" onclick="DalsiOtazka();o2()"> {{ tabulka1.2.2.2 }}</button>
+    </div>
+            </div>
+    </div>
+</div>
+<div id="otazka_16">
+    <div class="container">
+        <div class="row">
+            <div class="cell">
+        <span class="label">{{ tabulka1.2.3.3 }}</span>
+            </div>
+            <div class="cell">
+                <span class="label">{{ tabulka1.2.3.4 }} </span>
+            </div>
+
+            </div>
+            <div class="row">
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.2.3.1 }}" onclick="DalsiOtazka();o1()">  {{ tabulka1.2.3.1 }}</button>
+            </div>
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.2.3.2 }}" onclick="DalsiOtazka();o2()"> {{ tabulka1.2.3.2 }}</button>
+    </div>
+            </div>
+    </div>
+</div>
+<div id="otazka_17">
+    <div class="container">
+        <div class="row">
+            <div class="cell">
+        <span class="label">{{ tabulka1.2.4.3 }}</span>
+            </div>
+            <div class="cell">
+                <span class="label">{{ tabulka1.2.4.4 }} </span>
+            </div>
+
+            </div>
+            <div class="row">
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.2.4.1 }}" onclick="DalsiOtazka();o1()">  {{ tabulka1.2.4.1 }}</button>
+            </div>
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.2.4.2 }}" onclick="DalsiOtazka();o2()"> {{ tabulka1.2.4.2 }}</button>
+    </div>
+            </div>
+    </div>
+</div>
+<div id="otazka_18">
+    <div class="container">
+        <div class="row">
+            <div class="cell">
+        <span class="label">{{ tabulka1.2.5.3 }}</span>
+            </div>
+            <div class="cell">
+                <span class="label">{{ tabulka1.2.5.4 }} </span>
+            </div>
+
+            </div>
+            <div class="row">
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.2.5.1 }}" onclick="DalsiOtazka();o1()">  {{ tabulka1.2.5.1 }}</button>
+            </div>
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.2.5.2 }}" onclick="DalsiOtazka();o2()"> {{ tabulka1.2.5.2 }}</button>
+    </div>
+            </div>
+    </div>
+</div>
+
+<div id="otazka_19">
+    <div class="container">
+        <div class="row">
+            <div class="cell">
+        <span class="label">{{ tabulka1.3.0.3 }}</span>
+            </div>
+            <div class="cell">
+                <span class="label">{{ tabulka1.3.0.4 }} </span>
+            </div>
+
+            </div>
+            <div class="row">
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.3.0.1 }}" onclick="DalsiOtazka();o1()">  {{ tabulka1.3.0.1 }}</button>
+            </div>
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.3.0.2 }}" onclick="DalsiOtazka();o2()"> {{ tabulka1.3.0.2 }}</button>
+    </div>
+            </div>
+    </div>
+</div>
+
+<div id="otazka_20">
+    <div class="container">
+        <div class="row">
+            <div class="cell">
+        <span class="label">{{ tabulka1.3.1.3 }}</span>
+            </div>
+            <div class="cell">
+                <span class="label">{{ tabulka1.3.1.4 }} </span>
+            </div>
+
+            </div>
+            <div class="row">
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.3.1.1 }}" onclick="DalsiOtazka();o1()">  {{ tabulka1.3.1.1 }}</button>
+            </div>
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.3.1.2 }}" onclick="DalsiOtazka();o2()"> {{ tabulka1.3.1.2 }}</button>
+    </div>
+            </div>
+    </div>
+</div>
+
+<div id="otazka_21">
+    <div class="container">
+        <div class="row">
+            <div class="cell">
+        <span class="label">{{ tabulka1.3.2.3 }}</span>
+            </div>
+            <div class="cell">
+                <span class="label">{{ tabulka1.3.2.4 }} </span>
+            </div>
+
+            </div>
+            <div class="row">
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.3.2.1 }}" onclick="DalsiOtazka();o1()">  {{ tabulka1.3.2.1 }}</button>
+            </div>
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.3.2.2 }}" onclick="DalsiOtazka();o2()"> {{ tabulka1.3.2.2 }}</button>
+    </div>
+            </div>
+    </div>
+</div>
+
+<div id="otazka_22">
+    <div class="container">
+        <div class="row">
+            <div class="cell">
+        <span class="label">{{ tabulka1.3.3.3 }}</span>
+            </div>
+            <div class="cell">
+                <span class="label">{{ tabulka1.3.3.4 }} </span>
+            </div>
+
+            </div>
+            <div class="row">
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.3.3.1 }}" onclick="DalsiOtazka();o1()">  {{ tabulka1.3.3.1 }}</button>
+            </div>
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.3.3.2 }}" onclick="DalsiOtazka();o2()"> {{ tabulka1.3.3.2 }}</button>
+    </div>
+            </div>
+    </div>
+</div>
+
+<div id="otazka_23">
+    <div class="container">
+        <div class="row">
+            <div class="cell">
+        <span class="label">{{ tabulka1.3.4.3 }}</span>
+            </div>
+            <div class="cell">
+                <span class="label">{{ tabulka1.3.4.4 }} </span>
+            </div>
+
+            </div>
+            <div class="row">
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.3.4.1 }}" onclick="DalsiOtazka();o1()">  {{ tabulka1.3.4.1 }}</button>
+            </div>
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.3.4.2 }}" onclick="DalsiOtazka();o2()"> {{ tabulka1.3.4.2 }}</button>
+    </div>
+            </div>
+    </div>
+</div>
+
+
+<div id="otazka_24">
+    <div class="container">
+        <div class="row">
+            <div class="cell">
+        <span class="label">{{ tabulka1.3.5.3 }}</span>
+            </div>
+            <div class="cell">
+                <span class="label">{{ tabulka1.3.5.4 }} </span>
+            </div>
+
+            </div>
+            <div class="row">
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.3.5.1 }}" onclick="DalsiOtazka();o1()">  {{ tabulka1.3.5.1 }}</button>
+            </div>
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.3.5.2 }}" onclick="DalsiOtazka();o2()"> {{ tabulka1.3.5.2 }}</button>
+    </div>
+            </div>
+    </div>
+</div>
+
+
+<div id="otazka_25">
+    <div class="container">
+        <div class="row">
+            <div class="cell">
+        <span class="label">{{ tabulka1.4.0.3 }}</span>
+            </div>
+            <div class="cell">
+                <span class="label">{{ tabulka1.4.0.4 }} </span>
+            </div>
+
+            </div>
+            <div class="row">
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.4.0.1 }}" onclick="DalsiOtazka();o1()">  {{ tabulka1.4.0.1 }}</button>
+            </div>
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.4.0.2 }}" onclick="DalsiOtazka();o2()"> {{ tabulka1.4.0.2 }}</button>
+    </div>
+            </div>
+    </div>
+</div>
+
+<div id="otazka_26">
+    <div class="container">
+        <div class="row">
+            <div class="cell">
+        <span class="label">{{ tabulka1.4.1.3 }}</span>
+            </div>
+            <div class="cell">
+                <span class="label">{{ tabulka1.4.1.4 }} </span>
+            </div>
+
+            </div>
+            <div class="row">
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.4.1.1 }}" onclick="DalsiOtazka();o1()">  {{ tabulka1.4.1.1 }}</button>
+            </div>
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.4.1.2 }}" onclick="DalsiOtazka();o2()"> {{ tabulka1.4.1.2 }}</button>
+    </div>
+            </div>
+    </div>
+</div>
+
+<div id="otazka_27">
+    <div class="container">
+        <div class="row">
+            <div class="cell">
+        <span class="label">{{ tabulka1.4.2.3 }}</span>
+            </div>
+            <div class="cell">
+                <span class="label">{{ tabulka1.4.2.4 }} </span>
+            </div>
+
+            </div>
+            <div class="row">
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.4.2.1 }}" onclick="DalsiOtazka();o1()">  {{ tabulka1.4.2.1 }}</button>
+            </div>
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.4.2.2 }}" onclick="DalsiOtazka();o2()"> {{ tabulka1.4.2.2 }}</button>
+    </div>
+            </div>
+    </div>
+</div>
+<div id="otazka_28">
+    <div class="container">
+        <div class="row">
+            <div class="cell">
+        <span class="label">{{ tabulka1.4.3.3 }}</span>
+            </div>
+            <div class="cell">
+                <span class="label">{{ tabulka1.4.3.4 }} </span>
+            </div>
+
+            </div>
+            <div class="row">
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.4.3.1 }}" onclick="DalsiOtazka();o1()">  {{ tabulka1.4.3.1 }}</button>
+            </div>
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.4.3.2 }}" onclick="DalsiOtazka();o2()"> {{ tabulka1.4.3.2 }}</button>
+    </div>
+            </div>
+    </div>
+</div>
+<div id="otazka_29">
+    <div class="container">
+        <div class="row">
+            <div class="cell">
+        <span class="label">{{ tabulka1.4.4.3 }}</span>
+            </div>
+            <div class="cell">
+                <span class="label">{{ tabulka1.4.4.4 }} </span>
+            </div>
+
+            </div>
+            <div class="row">
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.4.4.1 }}" onclick="DalsiOtazka();o1()">  {{ tabulka1.4.4.1 }}</button>
+            </div>
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.4.4.2 }}" onclick="DalsiOtazka();o2()"> {{ tabulka1.4.4.2 }}</button>
+    </div>
+            </div>
+    </div>
+</div>
+<div id="otazka_30">
+    <div class="container">
+        <div class="row">
+            <div class="cell">
+        <span class="label">{{ tabulka1.4.5.3 }}</span>
+            </div>
+            <div class="cell">
+                <span class="label">{{ tabulka1.4.5.4 }} </span>
+            </div>
+
+            </div>
+            <div class="row">
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.4.5.1 }}" onclick="DalsiOtazka();o1()">  {{ tabulka1.4.5.1 }}</button>
+            </div>
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.4.5.2 }}" onclick="DalsiOtazka();o2()"> {{ tabulka1.4.5.2 }}</button>
+    </div>
+            </div>
+    </div>
+</div>
+
+<div id="otazka_31">
+    <div class="container">
+        <div class="row">
+            <div class="cell">
+        <span class="label">{{ tabulka1.5.0.3 }}</span>
+            </div>
+            <div class="cell">
+                <span class="label">{{ tabulka1.5.0.4 }} </span>
+            </div>
+
+            </div>
+            <div class="row">
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.5.0.1 }}" onclick="DalsiOtazka();o1()">  {{ tabulka1.5.0.1 }}</button>
+            </div>
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.5.0.2 }}" onclick="DalsiOtazka();o2()"> {{ tabulka1.5.0.2 }}</button>
+    </div>
+            </div>
+    </div>
+</div>
+<div id="otazka_32">
+    <div class="container">
+        <div class="row">
+            <div class="cell">
+        <span class="label">{{ tabulka1.5.1.3 }}</span>
+            </div>
+            <div class="cell">
+                <span class="label">{{ tabulka1.5.1.4 }} </span>
+            </div>
+
+            </div>
+            <div class="row">
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.5.1.1 }}" onclick="DalsiOtazka();o1()">  {{ tabulka1.5.1.1 }}</button>
+            </div>
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.5.1.2 }}" onclick="DalsiOtazka();o2()"> {{ tabulka1.5.1.2 }}</button>
+    </div>
+            </div>
+    </div>
+</div>
+<div id="otazka_33">
+    <div class="container">
+        <div class="row">
+            <div class="cell">
+        <span class="label">{{ tabulka1.5.2.3 }}</span>
+            </div>
+            <div class="cell">
+                <span class="label">{{ tabulka1.5.2.4 }} </span>
+            </div>
+
+            </div>
+            <div class="row">
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.5.2.1 }}" onclick="DalsiOtazka();o1()">  {{ tabulka1.5.2.1 }}</button>
+            </div>
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.5.2.2 }}" onclick="DalsiOtazka();o2()"> {{ tabulka1.5.2.2 }}</button>
+    </div>
+            </div>
+    </div>
+</div>
+<div id="otazka_34">
+    <div class="container">
+        <div class="row">
+            <div class="cell">
+        <span class="label">{{ tabulka1.5.3.3 }}</span>
+            </div>
+            <div class="cell">
+                <span class="label">{{ tabulka1.5.3.4 }} </span>
+            </div>
+
+            </div>
+            <div class="row">
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.5.3.1 }}" onclick="DalsiOtazka();o1()">  {{ tabulka1.5.3.1 }}</button>
+            </div>
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.5.3.2 }}" onclick="DalsiOtazka();o2()"> {{ tabulka1.5.3.2 }}</button>
+    </div>
+            </div>
+    </div>
+</div>
+<div id="otazka_35">
+    <div class="container">
+        <div class="row">
+            <div class="cell">
+        <span class="label">{{ tabulka1.5.4.3 }}</span>
+            </div>
+            <div class="cell">
+                <span class="label">{{ tabulka1.5.4.4 }} </span>
+            </div>
+
+            </div>
+            <div class="row">
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.5.4.1 }}" onclick="DalsiOtazka();o1()">  {{ tabulka1.5.4.1 }}</button>
+            </div>
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.5.4.2 }}" onclick="DalsiOtazka();o2()"> {{ tabulka1.5.4.2 }}</button>
+    </div>
+            </div>
+    </div>
+</div>
+<div id="otazka_36">
+    <div class="container">
+        <div class="row">
+            <div class="cell">
+        <span class="label">{{ tabulka1.5.5.3 }}</span>
+            </div>
+            <div class="cell">
+                <span class="label">{{ tabulka1.5.5.4 }} </span>
+            </div>
+
+            </div>
+            <div class="row">
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.5.5.1 }}" onclick="DalsiOtazka();o1()">  {{ tabulka1.5.5.1 }}</button>
+            </div>
+            <div class="cell">
+                <button class="button" type="button" value="{{ tabulka1.5.5.2 }}" onclick="DalsiOtazka();o2()"> {{ tabulka1.5.5.2 }}</button>
+    </div>
+            </div>
+    </div>
+</div>
+
+
+{{ endblock }}
+{{ block of scripts}}
+  <script>
+      document.getElementById('otazka_2').style.display = 'none';
+      document.getElementById('otazka_3').style.display = 'none';
+      document.getElementById('otazka_4').style.display = 'none';
+      document.getElementById('otazka_5').style.display = 'none';
+      document.getElementById('otazka_6').style.display = 'none';
+      document.getElementById('otazka_7').style.display = 'none';
+      document.getElementById('otazka_8').style.display = 'none';
+      document.getElementById('otazka_9').style.display = 'none';
+      document.getElementById('otazka_10').style.display = 'none';
+      document.getElementById('otazka_11').style.display = 'none';
+      document.getElementById('otazka_12').style.display = 'none';
+      document.getElementById('otazka_13').style.display = 'none';
+      document.getElementById('otazka_14').style.display = 'none';
+      document.getElementById('otazka_15').style.display = 'none';
+      document.getElementById('otazka_16').style.display = 'none';
+      document.getElementById('otazka_17').style.display = 'none';
+      document.getElementById('otazka_18').style.display = 'none';
+      document.getElementById('otazka_19').style.display = 'none';
+      document.getElementById('otazka_20').style.display = 'none';
+      document.getElementById('otazka_21').style.display = 'none';
+      document.getElementById('otazka_22').style.display = 'none';
+      document.getElementById('otazka_23').style.display = 'none';
+      document.getElementById('otazka_24').style.display = 'none';
+      document.getElementById('otazka_25').style.display = 'none';
+      document.getElementById('otazka_26').style.display = 'none';
+      document.getElementById('otazka_27').style.display = 'none';
+      document.getElementById('otazka_28').style.display = 'none';
+      document.getElementById('otazka_29').style.display = 'none';
+      document.getElementById('otazka_30').style.display = 'none';
+      document.getElementById('otazka_31').style.display = 'none';
+      document.getElementById('otazka_32').style.display = 'none';
+      document.getElementById('otazka_33').style.display = 'none';
+      document.getElementById('otazka_34').style.display = 'none';
+      document.getElementById('otazka_35').style.display = 'none';
+      document.getElementById('otazka_36').style.display = 'none';
+    var index3 = 0
+    var index2 = 0
+    function o1(){
+        liveSend({'t':'choice1','indexino':index2,'indexino2':index3 });
+        index2++;
+        if (index <= 36) {
+        document.getElementById('otazka_' + index).style.display = 'block';
+      }
+      if (index === 7){
+          index3++
+          index2 = 0
+      }
+      if (index === 13){
+          index3++
+          index2 = 0
+      }
+      if (index === 19){
+          index3++
+          index2 = 0
+      }
+      if (index === 25){
+          index3++
+          index2 = 0
+      }
+      if (index === 31){
+          index3++
+          index2 = 0
+      }
+
+      if (index >= 37 ) {
+          $('#form')[0].submit();
+      }
+
+    }
+    function o2(){
+        liveSend({'t':'choice2','indexino':index2,'indexino2':index3});
+        index2++;
+        if (index <= 36) {
+        document.getElementById('otazka_' + index).style.display = 'block';
+      }
+      if (index === 7){
+          index3++
+          index2 = 0
+      }
+      if (index === 13){
+          index3++
+          index2 = 0
+      }
+      if (index === 19){
+          index3++
+          index2 = 0
+      }
+      if (index === 25){
+          index3++
+          index2 = 0
+      }
+      if (index === 31){
+          index3++
+          index2 = 0
+      }
+
+      if (index >= 37 ) {
+          $('#form')[0].submit();
+      }
+    }
+    var index = 1;
+    function DalsiOtazka() {
+
+      document.getElementById('otazka_' + index).style.display = 'none';
+      index++;
+
+
+
+
+
+
+
+    }
+  </script>
+{{endblock}}
