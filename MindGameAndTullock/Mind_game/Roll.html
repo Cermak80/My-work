@@ -1,0 +1,70 @@
+{{block of styles}}
+<style>
+.text {
+    font-family: Serif;
+    font-style: Normal;
+    font-size: large;
+    line-height: 1.7;
+    text-align: justify;
+
+}
+.title {
+    font-size: xx-large;
+    font-weight: bold;
+    font-family: Serif;
+}
+.text_b {
+    font-family: Serif;
+    font-style: Normal;
+    font-size: large;
+    line-height: 1.7;
+    text-align: justify;
+    font-weight: bold;
+}
+
+.positioning{
+    width: 30%;
+    position: relative;
+}
+table, th, td {
+  border: 1px solid black;
+    text-align:center
+}
+.positioningava{
+    position: absolute;
+    top: 5%;
+    left: 80%;
+}
+</style>
+{{endblock}}
+{{ block content }}
+<div class="title">Part 1</div>
+<br>
+<div class="text">In this experiment, you will be matched with another participant, whom we will call your opponent. </div>
+<br>
+<div class="text">First, please think of any <b>two numbers</b> from 1 to 6 and remember them. </div>
+<br>
+<div class="text">At the end of these instructions we will ask you to roll a die using the online app <a href="https://rolladie.net">Roll a Die</a>. You will need to write the number you roll into the space provided below.  </div>
+<br>
+<div class="text">
+    There are two possible outcomes of the game:
+</div>
+<br>
+<ul>
+    <li>If the number you roll is one of the two numbers you thought of, please select “Yes” at the bottom of the form. Your payment will be £2, and your opponent will be paid £0. </li>
+    <li>If the number you roll is not one of the two numbers you thought of, please mark “No” at the bottom of the form. Your payoff will be £0, and your opponent will be paid £2.</li>
+</ul>
+<br>
+<div class="text">Please roll a die and write the number you roll into the space below:  </div>
+<br>
+<br>
+{{formfield 'Roll_the_dice'}}
+<br>
+<div class="text">
+    Next, please indicate whether the number you rolled on the die <b>is one of the two numbers </b>that you thought about before rolling the die:
+</div>
+{{formfield 'Yes_or_no'}}
+<br>
+    {{ next_button }}
+
+{{ endblock }}

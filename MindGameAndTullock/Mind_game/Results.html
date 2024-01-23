@@ -1,0 +1,58 @@
+{{block of styles}}
+<style>
+.text {
+    font-family: Serif;
+    font-style: Normal;
+    font-size: large;
+    line-height: 1.7;
+    text-align: justify;
+
+}
+.title {
+    font-size: xx-large;
+    font-weight: bold;
+    font-family: Serif;
+}
+.text_b {
+    font-family: Serif;
+    font-style: Normal;
+    font-size: large;
+    line-height: 1.7;
+    text-align: justify;
+    font-weight: bold;
+}
+
+.positioning{
+    width: 30%;
+    position: relative;
+}
+table, th, td {
+  border: 1px solid black;
+    text-align:center
+}
+.positioningava{
+    position: absolute;
+    top: 5%;
+    left: 80%;
+}
+</style>
+{{endblock}}
+{{ block content }}
+{{if Rtd == 1}}
+<div class="text">Your answer was YES. </div>
+<br>
+<div class="text">
+    You will receive £2  and your opponent will receive £0 from part 1 of the experiment.
+</div>
+<br>
+{{endif}}
+{{if Rtd == 2}}
+<div class="text">Your answer was NO. </div>
+<br>
+<div class="text">You will receive £0 and your opponent will receive £2 from part 1 of the experiment.</div>
+<br>
+{{endif}}
+
+    {{ next_button }}
+
+{{ endblock }}

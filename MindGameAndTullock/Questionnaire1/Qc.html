@@ -1,0 +1,31 @@
+{{block of styles}}
+<link type="text/css" rel="stylesheet" href="{{ static 'design.css' }}"/>
+{{endblock}}
+{{ block content }}
+<div class="title">
+    Questionnaire 1
+</div>
+<br>
+<div class="text">
+How well does each of the following statements describe you as a person? Please indicate your answer on a scale from 0 to 10. A 0 means “does not describe me at all,” and a 10 means “describes me perfectly.” You can use any number between 0 and 10 to indicate where you fall on the scale, using 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, or 10.
+</div>
+<br>
+<div class="text"> <b> A. </b>When someone does me a favor, I am willing to return it.    </div>
+{{formfield 'Qc1' }}
+<br>
+<div class="text"><b>B.</b> If I were treat very unjustly, I will take revenge at the first occasion, even if there is a cost to do so.  </div>
+  {{formfield 'Qc2' }}
+<br>
+<div class="text"><b>C.</b> I assume that people have only the best intentions.  </div>
+{{formfield 'Qc3' }}
+<br>
+<div class="text"><b>D.</b> I am good at math.  </div>
+{{formfield 'Qc4' }}
+<br>
+<div class="text"><b>E.</b> I tend to postpone tasks even if I know it would be better to do them right away.   </div>
+{{formfield 'Qc5' }}
+<br>
+{{ next_button }}
+
+
+{{ endblock }}

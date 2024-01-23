@@ -1,0 +1,54 @@
+{{block of styles}}
+<style>
+.text {
+    font-family: Serif;
+    font-style: Normal;
+    font-size: large;
+    line-height: 1.7;
+    text-align: justify;
+
+}
+.title {
+    font-size: xx-large;
+    font-weight: bold;
+    font-family: Serif;
+}
+.text_b {
+    font-family: Serif;
+    font-style: Normal;
+    font-size: large;
+    line-height: 1.7;
+    text-align: justify;
+    font-weight: bold;
+}
+
+.positioning{
+    width: 30%;
+    position: relative;
+}
+table, th, td {
+  border: 1px solid black;
+    text-align:center
+}
+.positioningava{
+    position: absolute;
+    top: 5%;
+    left: 80%;
+}
+</style>
+{{endblock}}
+{{ block content }}
+<div class="title">Part 1</div>
+<br>
+<div class="text">In the experiment, you will be matched with another participant, whom we will call your opponent. </div>
+<br>
+<div class="text">Your opponent was asked to think of any <b>two numbers</b> from 1 to 6 and remember them. He/she was then asked to roll a die and report whether the number he/she rolled was one of the two numbers he/she thought of. There are two possible outcomes of the game:</div>
+<br>
+<ul>
+    <li>Your opponent reports that the rolled number <b>is</b> one of the two numbers he/she thought of. Then your opponent will receive a payment of £2, and you will be paid £0.</li>
+    <li>Your opponent reports that the rolled number <b>is not</b> one of the two numbers he/she thought of. Then your opponent will receive a payment of £0, and you will be paid £2.</li>
+</ul>
+<br>
+    {{ next_button }}
+
+{{ endblock }}

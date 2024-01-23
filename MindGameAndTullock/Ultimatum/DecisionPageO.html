@@ -1,0 +1,143 @@
+
+{{block of scripts}}
+<script>
+    let slider = document.getElementById("slider")
+    let selectValue = document.getElementById("select_value")
+    selectValue.innerHTML = slider.value
+
+
+
+
+    slider.oninput = function (){
+        selectValue.innerHTML = slider.value
+
+        liveSend({'t':'final','final_value': slider.value});
+            this.blur();
+
+        }
+
+
+
+    $("button.otree-btn-next").on("click",function (){
+            liveSend({'t':'final','final_value': slider.value, });
+            this.blur();
+
+        });
+
+</script>
+{{endblock}}
+
+{{block of styles}}
+<style>
+.text {
+    font-family: Serif;
+    font-style: Normal;
+    font-size: large;
+    line-height: 1.7;
+    text-align: justify;
+
+}
+.title {
+    font-size: xx-large;
+    font-weight: bold;
+    font-family: Serif;
+}
+.text_b {
+    font-family: Serif;
+    font-style: Normal;
+    font-size: large;
+    line-height: 1.7;
+    text-align: justify;
+    font-weight: bold;
+}
+#slider{
+        width: 70%;
+        height: 70px;
+        outline: none;
+        border-radius: 3px;
+}
+#slider2{
+        width: 70%;
+        height: 70px;
+        outline: none;
+        border-radius: 3px;
+}
+
+.positioning{
+    width: 30%;
+    position: relative;
+}
+table, th, td {
+  border: 1px solid black;
+    text-align:center
+}
+.positioningava{
+    position: absolute;
+    top: 5%;
+    left: 80%;
+}
+#slider{
+        width: 70%;
+        height: 70px;
+        outline: none;
+        border-radius: 3px;
+}
+#slider2{
+        width: 70%;
+        height: 70px;
+        outline: none;
+        border-radius: 3px;
+}
+</style>
+{{endblock}}
+{{ block content }}
+<div class="title">
+    Part 2
+</div>
+<br>
+<div class="text">Part 2 involves a hypothetical situation. <b>You will not earn any money in this part.</b> Still, please answer as if the experiment was played for real money..</div>
+   <br>
+<div class="text">
+    In part 2 of the experiment you will interact with <b>the same opponent as in part 1.</b>
+</div>
+<br>
+
+
+
+
+
+
+<div class="text">
+   Imagine your opponent has been given £100. He/she has made a proposal for how to split the £100 between the two of you.
+
+</div>
+<br>
+<div class="text">
+    Your task is to state the smallest amount you are willing to accept. We will call this amount <b>the minimum acceptable offer. </b>
+</div>
+<br>
+<ul>
+    <li>If your opponent offers you an amount that is larger than or equal to the minimum acceptable offer, then you <b>accept</b> the offer and the £100 will be split as your opponent suggests. </li>
+    <li>If your opponent offers you an amount that is smaller than the minimum acceptable offer, then you <b>reject</b> the offer and both of you receive nothing. </li>
+</ul>
+<br>
+<div class="text">
+    The minimum acceptable offer shows what distribution of the £100 is acceptable to you. For lower amounts, you prefer both of you to receive nothing rather than having the money distributed as proposed by your opponent.
+</div>
+<br>
+<div class="text">The smallest offer that I am willing to accept is:  </div>
+<div class="text" id="select_value">0</div>
+
+<input type="range" min="0" max="100" value="0" id="slider">
+<br>
+
+
+
+
+
+
+
+
+{{ next_button }}
+
+{{ endblock }}

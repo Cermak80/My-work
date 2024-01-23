@@ -1,0 +1,68 @@
+{{block of styles}}
+<style>
+.text {
+    font-family: Serif;
+    font-style: Normal;
+    font-size: large;
+    line-height: 1.7;
+    text-align: justify;
+
+}
+.title {
+    font-size: xx-large;
+    font-weight: bold;
+    font-family: Serif;
+}
+.text_b {
+    font-family: Serif;
+    font-style: Normal;
+    font-size: large;
+    line-height: 1.7;
+    text-align: justify;
+    font-weight: bold;
+}
+
+.positioning{
+    width: 30%;
+    position: relative;
+}
+table, th, td {
+  border: 1px solid black;
+    text-align:center
+}
+.positioningava{
+    position: absolute;
+    top: 5%;
+    left: 80%;
+}
+</style>
+{{endblock}}
+{{ block content }}
+<div class="title">Part 1</div>
+<br>
+<div class="text">
+In this experiment, you will be matched with another participant, whom we will call your opponent.
+</div>
+<br>
+<div class="text">
+The computer will roll a die, i.e. it will randomly select one number from 1 to 6, each with equal probability.
+</div>
+<br>
+<div class="text">
+There are two possible outcomes of the game:
+</div>
+<br>
+<ul>
+{{ if role == roleA}}
+<li>If the computer selects number 1 or 2, your payment will be £2, and your opponent with will be paid £0. </li>
+    <li>If the computer selects number 3, 4, 5 or 6, your payoff will be £0, and your opponent will be paid £2.</li>
+{{endif}}
+{{if role == roleO}}
+<li>If the computer selects number 1 or 2, your payment will be £0, and your opponent with will be paid £2. </li>
+    <li>If the computer selects number 3, 4, 5 or 6, your payoff will be £2, and your opponent will be paid £0.</li>
+{{endif}}
+    </ul>
+<br>
+    {{ next_button }}
+
+{{ endblock }}

@@ -1,0 +1,325 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{{block of scripts}}
+<! -- source of the slider: https://gitlab.com/gr0ssmann/otree_slider/-/blob/main/mgslider.js-->
+<! -- Copyright (C) 2022 Max R. P. Grossmann-->
+<script>
+var mgsliders = Array();
+
+mgsliders.lookup = function (which) {
+    for (var j = 0; j < mgsliders.length; j++) {
+        if (mgsliders[j].field == which) {
+            return mgsliders[j].obj;
+        }
+    }
+
+    return undefined;
+};
+
+function mgslider(field, min, max, step) {
+    this.field = field;
+    this.min = parseFloat(min);
+    this.max = parseFloat(max);
+    this.step = parseFloat(step);
+    this.digits = this.suggest_digits(step);
+
+    this.prefix = "mgslider_yF5sTZLy";
+    this.yourvalue = "Investment: ";
+    this.yourvalue2 = ""
+
+    mgsliders.push({field: field, obj: this});
+}
+
+mgslider.prototype.fzero = function (s) {
+    for (var c = s.length-1; c >= 0; c--) {
+        if (s[c] != "0") {
+            return c;
+        }
+    }
+
+    return 0;
+};
+
+mgslider.prototype.suggest_digits = function (x) {
+    x = x.toFixed(10);
+    return this.fzero(x) - x.search(/\./);
+};
+
+mgslider.prototype.f2s = function (val, detect) {
+    if (detect) {
+        return val.toFixed(this.suggest_digits(val)).replace("-", "&ndash;");
+    }
+    return val.toFixed(this.digits).replace("-", "&ndash;");
+};
+
+mgslider.prototype.id = function (id_) {
+    if (id_ === undefined) {
+        id_ = "";
+    }
+
+    return this.prefix + "_" + this.field + "_" + id_;
+};
+
+mgslider.prototype.markup = function () {
+    return "\
+        <table id='" + this.id("wrapper") + "' class='mgslider-wrapper' border='0'>\
+            <tr>\
+                \
+                <td width='100%'>\
+                    <div id='" + this.id("before") + "' class='mgslider-before' onclick='mgsliders.lookup(\"" + this.field + "\").reveal(event)'></div>\
+                    <input type='range' id='" + this.id() + "' min='" + this.min + "' max='" + this.max + "' step='" + this.step + "' value='' class='mgslider form-range' oninput='mgsliders.lookup(\"" + this.field + "\").change()' onchange='mgsliders.lookup(\"" + this.field + "\").change()'>\
+                </td>\
+                \
+            </tr>\
+            \
+            <tr class='mgslider-feedback'>\
+                  <td></td><td id='" + this.id("show") + "' class='mgslider-show' colspan='3'><i>" + this.yourvalue + " </i> CZK <b><span id='" + this.id("cur") + "' class='mgslider-value'></span></b></td>\
+            </tr>\
+          \
+                 <td></td><td id='" + this.id("show2") + "' class='mgslider-show2' colspan='3'><i>" + this.yourvalue2 + "</i><b><span id='" + this.id("cur2") + "' class='mgslider-value'></span></b></td>\
+            </tr>\
+            \
+        </table>\
+        \
+        <input type='hidden' id='" + this.id("input") + "' name='" + this.field + "' value='' />";
+};
+
+mgslider.prototype.hide = function () {
+    document.getElementById(this.id()).style.display = "none";
+    document.getElementById(this.id("show")).style.visibility = "hidden";
+    document.getElementById(this.id("show2")).style.visibility = "hidden";
+    document.getElementById(this.id("show")).style.textAlign = "center";
+    document.getElementById(this.id("show2")).style.textAlign = "center";
+    document.getElementById(this.id("before")).style.display = "block";
+    document.getElementById("bt2").style.display = "hidden"
+};
+
+mgslider.prototype.print = function (el) {
+    el.innerHTML += this.markup();
+    this.hide();
+};
+
+mgslider.prototype.value = function () {
+    return parseFloat(document.getElementById(this.id()).value);
+};
+
+mgslider.prototype.change = function () {
+    document.getElementById(this.id("cur")).innerHTML = this.f2s(this.value(), false);
+
+    document.getElementById(this.id("input")).value = this.value();
+    x = this.value()
+};
+
+mgslider.prototype.reveal = function (event) {
+    var now;
+
+    if (event !== undefined && typeof event.offsetX !== undefined) {
+        var max = parseInt(getComputedStyle(document.getElementById(this.id("before"))).width.replace("px", ""));
+        var cur = event.offsetX;
+
+
+        now = (cur/max)*(this.max-this.min) + this.min;
+    }
+    else {
+        now = this.min + Math.random()*(this.max - this.min);
+    }
+
+    now = Math.round(now/this.step)*this.step;
+
+    document.getElementById(this.id()).style.display = "block";
+    document.getElementById(this.id("before")).style.display = "none";
+    document.getElementById(this.id("show")).style.visibility = "visible";
+    document.getElementById(this.id("show2")).style.visibility = "visible";
+    document.getElementById("bt2").style.display = "visible"
+
+    document.getElementById(this.id()).value = now;
+    this.change();
+};
+
+$("button").on("click",function (){
+            liveSend({'c':'final1','d': x});
+            this.blur();
+
+        });
+function liveRecv(data) {
+        let k = data.c
+        if (k === 'submit') {
+            $('#form')[0].submit();
+
+        }}
+
+
+</script>
+{{endblock}}
+{% block of styles %}
+<style>
+.text {
+    font-family: Serif;
+    font-style: Normal;
+    font-size: large;
+    line-height: 1.7;
+    text-align: center;
+
+}
+.title {
+    font-size: xx-large;
+    font-weight: bold;
+    font-family: Serif;
+}
+.text_b {
+    font-family: Serif;
+    font-style: Normal;
+    font-size: large;
+    line-height: 1.7;
+    text-align: justify;
+    font-weight: bold;
+}
+.mgslider-show{
+    position: absolute;
+    left: 50%;
+    margin-top: 20px;
+}
+.mgslider-show2{
+    position: absolute;
+    left: 50%;
+    margin-top: 20px;
+}
+.positioningava{
+    width: 5%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.positioningava1{
+    width: 10%;
+    position: relative;
+
+
+
+}
+.positioning12{
+    width: 100px;
+    position: relative;
+    left: 35%;
+    margin-top: 10px;
+
+
+
+}
+.text1{
+    position: relative;
+    left: 30%;
+    margin-top: 10px;
+
+
+
+}
+#slider{
+        width: 70%;
+        height: 70px;
+        outline: none;
+        border-radius: 3px;
+}
+.positioning1{
+    float: left; width: 100%;
+
+
+
+}
+.bt2{
+    background-color: red;
+    position: absolute;
+    right: 20%;
+}
+
+</style>
+{% endblock %}
+
+{{ block content }}
+
+
+    <style>
+        .mgslider-wrapper {
+            border-spacing: 10px;
+            position: relative;
+            width: 100%;
+
+        }
+        .mgslider-limit {
+            width: 10%;
+            min-width: 75px;
+            height: 40px;
+            margin: 100px;
+            text-align: center;
+            background: #eee;
+            border: 1px solid #888;
+        }
+        .mgslider-limit, .mgslider-value {
+            font-variant-numeric: tabular-nums;
+        }
+        .mgslider-before {
+            height: 16px;
+            width: 100%;
+            background: #1e5bff;
+
+        }
+    </style>
+<br>
+
+
+
+
+<div class="title">
+   Part 2
+</div>
+<br>
+
+<div class="text">
+Part 2 involves a hypothetical situation. <b>You will not earn any money in this part.</b> Still, please, answer as if the experiment was played for real money.
+
+</div>
+<br>
+<div class="text">
+    In part 2 of the experiment you will interact with <b>the same opponent as in part 1.</b>
+
+</div>
+<br>
+<div class="text">
+    Imagine your opponent has been given £100. He/she has made a proposal for how to split the £100 between the two of you.
+
+</div>
+<br>
+<div class="text">
+    Your task is to state the smallest amount you are willing to accept. We will call this amount <b>the minimum acceptable offer</b>. 
+</div>
+<br>
+<ul>
+    <li>If your opponent offers you an amount that is larger than or equal to the minimum acceptable offer, then you <b>accept</b> the offer and the £100 will be split as your opponent suggests. </li>
+    <li>If your opponent offers you an amount that is smaller than the minimum acceptable offer, then you <b>reject</b> the offer and both of you receive nothing. </li>
+</ul>
+<br>
+<div class="text">
+    The minimum acceptable offer shows what distribution of the £100 is acceptable to you. For lower amounts, you prefer both of you to receive nothing rather than having the money distributed as proposed by your opponent.
+</div>
+
+    <div id="sliders_here"></div>
+<br>
+<div id="bt2">
+<button class="bt3" type="button">Next </button>
+    </div>
+    <script>
+        $(document).ready(function (event) {
+            let slider = new mgslider("price", 0, 100,1);
+            slider.print(document.getElementById("sliders_here"));
+
+        });
+
+
+
+    </script>
+
+
+
+{{ endblock }}
+
